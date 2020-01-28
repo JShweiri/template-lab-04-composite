@@ -7,9 +7,14 @@
 #include "rand.hpp"
 #include "op_test.hpp"
 
-TEST(composite_test, Op_Test ){
+TEST(composite_test, Op_Test_stringify ){
 	Base* three = new Op(3);
 	EXPECT_EQ("3.000000", three->stringify());
+}
+
+TEST(composite_test, Op_Test_evalueate) {
+	Base* three = new Op(3);
+	EXPECT_EQ(3, three->evaluate());
 }
 
 int main(int argc, char **argv) {
