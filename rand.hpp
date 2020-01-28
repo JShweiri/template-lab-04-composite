@@ -1,4 +1,4 @@
-#ifdef _RAND_HPP
+#ifdef __RAND_HPP__
 #define __RAND_HPP__
 
 #include "Base.hpp"
@@ -10,8 +10,8 @@ class Rand : public Base {
         virtual std::string stringify() { return std::to_string(val); }
 	
     Protected: 
-	Base* left;
-	Base* right;
+	Base *left;
+	Base *right;
     Private:
 	double val;
 };
