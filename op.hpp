@@ -5,6 +5,7 @@
 
 class Op : public Base {
     public:
+	Op(Base *l, Base *r) : Base() {left = l; right = r; };
         Op(double value) : Base() {val = value; }
         virtual double evaluate() { return val; }
         virtual std::string stringify() { return std::to_string(val) ; }

@@ -6,7 +6,7 @@
 
 class Pow : public Op {
     public:
-        Pow(Base *l, Base *r) : Base() {left = l; right = r;}
+        Pow(Base *l, Base *r) : Op() {left = l; right = r;}
         virtual double evaluate() { return pow(left->evaluate(), right->evaluate()); }
         virtual std::string stringify() { return left->stringify() + " ** " + right->stringify(); }
 };
