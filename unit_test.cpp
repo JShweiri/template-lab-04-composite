@@ -57,7 +57,15 @@ TEST(composite_test, Div_test_evaluate) {
 	EXPECT_EQ(0.750000, div2->evaluate());
 }
 
+TEST(composite_test, Rand_test_evaluate) {
+	Base* rand1 = new Rand();
+	EXPECT_EQ(83, rand1->evaluate());
+}
 
+TEST(composite_test, Rand_test_stringify) {
+	Base* rand2 = new Rand();
+	EXPECT_EQ("83.000000", rand2->stringify());
+}
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
